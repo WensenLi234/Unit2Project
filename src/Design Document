@@ -8,10 +8,13 @@ Instance Variables:
     - private double y2 - Represents the y value of the second coordinate
     - private double slope - Represents the slope of the line between the two coordinates
     - private double yIntercept - Represents the y-intercept of the line between the two coordinates
+    - private double distance - Represents the distance between the two coordinates.
 Constructor
     public LinearEquation(double x1, double y1, double x2, double y2)
-        - Constructs an object and declares its private variables to their respective parameters.
-        -
+        - Constructs an object and declares its private variables as follows:
+            - x1 as x1
+            - y1 as y1
+            - x2 as x2
 Methods
     public double Slope()
         - Returns the quotient of the difference between y2 and y1 and the difference between x2 and x1, rounded
