@@ -28,3 +28,18 @@ Methods
         y-intercept of the two points the equation of the line in between the two points in slope-intercept form,
         and the distance between the two points
 EquationRunner
+    Import the Scanner class for user input.
+    Step 1: Ask the user to type the first coordinate point, and store the response to a String
+    variable coordOne.
+    Step 2: Ask the user to type the second coordinate point, and store the response to a String
+    variable coordTwo.
+    Step 3: Create an instance of the LinearEquation class called LinearEquation
+     with the arguments as follows:
+        - x1 as the x value of coordOne (parsed out of the String literal)
+        - y1 as the y value of coordOne (parsed out of the String literal)
+        - x2 as the x value of coordTwo (parsed out of the String literal)
+        - y2 as the y value of coordTwo (parsed out of the String literal)
+    Step 4: Print out the LinearEquation instance.
+    Step 5: Set a double variable Slope to the result of calling the Slope method in the LinearEquation
+    instance. Ask the user to type another x value.
+    Step 6:
