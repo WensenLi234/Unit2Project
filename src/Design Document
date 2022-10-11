@@ -1,0 +1,30 @@
+The goal of this project is to create a program that prompts the user to input two coordinate points.
+These coordinate points will then be used to calculate the linear equation of the line in between those two points,
+the slope and y-intercept of that mentioned line, and the distance between the two points.
+
+LinearEquation class
+
+Instance Variables:
+    - private double x1 - Represents the x value of the first coordinate
+    - private double y1 - Represents the y value of the first coordinate
+    - private double x2 - Represents the x value of the second coordinate
+    - private double y2 - Represents the y value of the second coordinate.
+Constructor
+    public LinearEquation(double x1, double y1, double x2, double y2)
+        - Constructs an object and declares its private variables to their respective parameters.
+Methods
+    public double Slope(double x1, double y1, double x2, double y2)
+        - Returns the quotient of the difference between y2 and y1 and the difference between x2 and x1, rounded
+        to the nearest hundredth.
+    public double YIntercept(double slope, double y, double x)
+        - Returns the difference between y and the product of slope and x.
+    public String SlopeInterceptForm(double x1, double y1, double x2, double y2, double b)
+        - Returns a String comprised of "y = " + the difference between y2 and y1 + "/" + the difference
+        between x2 and x1 + "x + " + b".
+    public double distance(double x1, double y1, double x2, double y2)
+        - Returns the square root of the sum of (x2 - x1) multiplied by itself, and (y2 - y1) multiplied by itself.
+    public String toString()
+        - Returns all the information of the object, including the coordinates of the two points, the slope, the
+        y-intercept of the two points the equation of the line in between the two points in slope-intercept form,
+        and the distance between the two points
+EquationRunner
