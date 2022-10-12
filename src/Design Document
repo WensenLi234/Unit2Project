@@ -11,27 +11,34 @@ Instance Variables:
     - private double distance - Represents the distance between the two coordinates.
 Constructor
     public LinearEquation(double x1, double y1, double x2, double y2)
-        - Constructs an object and declares its private variables as follows:
+        - If x2 is not equal to x1, this will construct
+         an object and declares its private variables as follows:
             - x1 as x1
             - y1 as y1
             - x2 as x2
+            - y2 as y2
+            - slope as the return value of calling slope()
+            - yIntercept as the return value of calling yIntercept()
+            - distance as the return value of calling distance()
 Methods
-    public double Slope()
-        - Returns the quotient of the difference between y2 and y1 and the difference between x2 and x1, rounded
-        to the nearest hundredth.
-    public double YIntercept()
-        - Returns the difference between y and the product of the return value of the Slope() method
-         and x.
+    public double round(double nearest, double value)
+        - Returns the quotient of the value multiplied by nearest as an int and nearest.
+    public double slope()
+        - Returns the quotient of the difference between y2 and y1 and
+         difference between x2 and x1, rounded using the round() method.
+    public double yIntercept()
+        - Returns the difference between y and the product of the return value of the slope() method
+         and x, rounded using the round() method.
     public String SlopeInterceptForm()
         - Returns a String comprised of "y = " + the difference between y2 and y1 + "/" + the difference
         between x2 and x1 + "x + " + the return value of the YIntercept() method".
     public double distance()
         - Returns the square root of the sum of (x2 - x1) multiplied by itself,
-        and (y2 - y1) multiplied by itself.
+        and (y2 - y1) multiplied by itself, rounded using the round() method.
     public String toString()
-        - Returns all the information of the object, including the coordinates of the two points,
-        the slope, the y-intercept of the two points the equation of the line in between the two
-        points in slope-intercept form, and the distance between the two points.
+        - Returns a String that contains one line for each variable the instance has, followed by
+        ": " and the literal of the respective variable.
+
 EquationRunner
     Import the Scanner class for user input.
     Step 1: Ask the user to type the first coordinate point, and store the response to a String
@@ -45,6 +52,6 @@ EquationRunner
         - x2 as the x value of coordTwo (parsed out of the String literal)
         - y2 as the y value of coordTwo (parsed out of the String literal)
     Step 4: Print out the LinearEquation instance.
-    Step 5: Set a double variable Slope to the result of calling the Slope method in the
-    LinearEquation instance, then ask the user to type another x value.
-    Step 6:
+    Step 5: Ask the user for an x-value, and store the response to a double variable coordThree
+    Step 6: Print out the sum of coordThree multiplied by LinearEquation's slope literal and
+    LinearEqation's yIntercept literal, rounded using the LinearEquation class's round() method.
