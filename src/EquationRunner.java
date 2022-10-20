@@ -4,14 +4,19 @@ import java.util.Scanner;
 public class EquationRunner {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        NumberFormat numberFormat = NumberFormat.getInstance();
         System.out.println("Please insert a coordinate: ");
-        String coordOne = new String(userInput.nextLine());
+        String coordOne = userInput.nextLine().replaceAll("\\s", "");
         System.out.println("Please insert a second coordinate: ");
-        String coordTwo = new String(userInput.nextLine());
+        String coordTwo = userInput.nextLine().replaceAll("\\s", "");
+        System.out.println(coordOne.substring(1, 2) + ", " + coordOne.substring(3, 4));
         LinearEquation linearEquation = new LinearEquation(
-                numberFormat.parse(),
-                numberFormat.parse(),
-                numberFormat.parse();
+                Double.parseDouble(coordOne.substring(1, 2)),
+                Double.parseDouble(coordOne.substring(3, 4)),
+                Double.parseDouble(coordTwo.substring(1, 2)),
+                Double.parseDouble(coordTwo.substring(3, 4)));
+        System.out.println(linearEquation);
+        System.out.println("Please insert a new x value: ");
+        double coordThreeX = userInput.nextDouble();
+        System.out.println("The coordinate with this x-value is: " + "(" + coordThreeX + ", " + linearEquation.findY(coordThreeX) + ")");
     }
 }
