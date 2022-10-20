@@ -10,7 +10,7 @@ Instance Variables:
     - private double yIntercept - Represents the y-intercept of the line between the two coordinates
     - private double distance - Represents the distance between the two coordinates.
 Constructor
-    public LinearEquation(double x1, double y1, double x2, double y2)
+    public LinearEquation(int x1, int y1, int x2, int y2)
         - If x2 is not equal to x1, this will construct
          an object and declares its private variables as follows:
             - x1 as x1
@@ -27,7 +27,7 @@ Methods
         - Returns the quotient of the difference between y2 and y1 and
          difference between x2 and x1, rounded using the round() method.
     public double yIntercept()
-        - Returns the remainder of y1 and slope multiplied by x1.
+        - Returns the difference between y1 and slope multiplied by x1.
     public String SlopeInterceptForm()
         - Returns a String comprised of "y = " + the difference between y2 and y1 + "/" + the difference
         between x2 and x1 + "x + " + the return value of the YIntercept() method".
@@ -43,17 +43,17 @@ Methods
 EquationRunner
     Import the Scanner class for user input.
     Import the NumberFormat class for conversion from String to number.
-    Step 1: Ask the user to type the first coordinate point, and store the response to a String
-    variable coordOne.
-    Step 2: Ask the user to type the second coordinate point, and store the response to a String
-    variable coordTwo.
+    Step 1: Ask the user to type the first coordinate point, and remove all spaces from the response and
+    store it to a String variable coordOne.
+    Step 2: Ask the user to type the second coordinate point, and remove all spaces from the response and
+    store it to a String variable coordTwo.
     Step 3: Create an instance of the LinearEquation class called LinearEquation
      with the arguments as follows:
-        - x1 as the x value of coordOne (parsed out of the String literal converted to a number using NumberFormat)
-        - y1 as the y value of coordOne (parsed out of the String literal converted to a number using NumberFormat)
-        - x2 as the x value of coordTwo (parsed out of the String literal converted to a number using NumberFormat)
-        - y2 as the y value of coordTwo (parsed out of the String literal converted to a number using NumberFormat)
+        - x1 as the x value of coordOne (parsed out of the String literal converted to a number using Int.parseInt)
+        - y1 as the y value of coordOne (parsed out of the String literal converted to a number using Int.parseInt)
+        - x2 as the x value of coordTwo (parsed out of the String literal converted to a number using Int.parseInt)
+        - y2 as the y value of coordTwo (parsed out of the String literal converted to a number using Int.parseInt)
     Step 4: Print out the LinearEquation instance.
-    Step 5: Ask the user for an x-value, and store the response to a double variable coordThree
+    Step 5: Ask the user for an x-value, and store the response to a double variable coordThreeX.
     Step 6: Print out the return of calling the LinearEquation instance's findY() method,
      rounded using the LinearEquation class's round() method.

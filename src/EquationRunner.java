@@ -8,12 +8,11 @@ public class EquationRunner {
         String coordOne = userInput.nextLine().replaceAll("\\s", "");
         System.out.println("Please insert a second coordinate: ");
         String coordTwo = userInput.nextLine().replaceAll("\\s", "");
-        System.out.println(coordOne.substring(1, 2) + ", " + coordOne.substring(3, 4));
         LinearEquation linearEquation = new LinearEquation(
-                Double.parseDouble(coordOne.substring(1, 2)),
-                Double.parseDouble(coordOne.substring(3, 4)),
-                Double.parseDouble(coordTwo.substring(1, 2)),
-                Double.parseDouble(coordTwo.substring(3, 4)));
+                Integer.parseInt(coordOne.substring(1, coordOne.indexOf(","))),
+                Integer.parseInt(coordOne.substring(coordOne.indexOf(",") + 1, coordOne.indexOf(")"))),
+                Integer.parseInt(coordTwo.substring(1, coordTwo.indexOf(","))),
+                Integer.parseInt(coordTwo.substring(coordTwo.indexOf(",") + 1, coordTwo.indexOf(")"))));
         System.out.println(linearEquation);
         System.out.println("Please insert a new x value: ");
         double coordThreeX = userInput.nextDouble();

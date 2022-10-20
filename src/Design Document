@@ -10,7 +10,7 @@ Instance Variables:
     - private double yIntercept - Represents the y-intercept of the line between the two coordinates
     - private double distance - Represents the distance between the two coordinates.
 Constructor
-    public LinearEquation(double x1, double y1, double x2, double y2)
+    public LinearEquation(int x1, int y1, int x2, int y2)
         - If x2 is not equal to x1, this will construct
          an object and declares its private variables as follows:
             - x1 as x1
@@ -49,10 +49,10 @@ EquationRunner
     store it to a String variable coordTwo.
     Step 3: Create an instance of the LinearEquation class called LinearEquation
      with the arguments as follows:
-        - x1 as the x value of coordOne (parsed out of the String literal converted to a number using Double.parse)
-        - y1 as the y value of coordOne (parsed out of the String literal converted to a number using Double.parse)
-        - x2 as the x value of coordTwo (parsed out of the String literal converted to a number using Double.parse)
-        - y2 as the y value of coordTwo (parsed out of the String literal converted to a number using Double.parse)
+        - x1 as the x value of coordOne (parsed out of the String literal converted to a number using Int.parseInt)
+        - y1 as the y value of coordOne (parsed out of the String literal converted to a number using Int.parseInt)
+        - x2 as the x value of coordTwo (parsed out of the String literal converted to a number using Int.parseInt)
+        - y2 as the y value of coordTwo (parsed out of the String literal converted to a number using Int.parseInt)
     Step 4: Print out the LinearEquation instance.
     Step 5: Ask the user for an x-value, and store the response to a double variable coordThreeX.
     Step 6: Print out the return of calling the LinearEquation instance's findY() method,
